@@ -6,10 +6,10 @@ import os
 file1 = open("rules/age.txt", "r")
 age_check = int(file1.read())
 file1.close()
-
+#file2 regel 12 file 1 veranderd naar file2
 file2 = open("rules/height.txt", "r")
 height_check = int(file2.read())
-file1.close()
+file2.close()
 
 running = True
 while running:
@@ -23,17 +23,18 @@ while running:
     height = int(height)
 
     #Process checks
+    #Pauze naar 1 seconde gedaan
     if(age > age_check and height > height_check):
         os.system('cls')
         print("Stap maar in!")
         print(coasterimg.get())
-        time.sleep(2)
+        time.sleep(1)
 
     else:
         os.system('cls')
         print("Je voldoet niet aan de voorwaarden...")
         print(coasterimg.sad())
-        time.sleep(2)
+        time.sleep(1)
 
     result = input("Druk op Enter om nog een keer te checken, of X om te stoppen\n\n")
     if(result.upper() == "X"):
